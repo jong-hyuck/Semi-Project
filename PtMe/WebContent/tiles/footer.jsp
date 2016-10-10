@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=euc-kr"%>
-aaaaaa
+
 <footer>
 	<center>
 		<div id="div-footer">
