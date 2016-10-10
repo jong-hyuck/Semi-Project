@@ -1,0 +1,14 @@
+html, body{ height:100% }
+body { margin:0; }
+a:link { color : #000000; text-decoration:none; }
+a:visited { text-decoration:none; }
+a:active { text-decoration:none; }
+a:hover { color : #606060; text-decoration:none; }
+
+#top-head { background-color:#ffffff; FONT-FAMILY: ±¼¸²,verdana,tahoma; font-size:13px; }
+#nav-head { background-color:#ffc800; FONT-FAMILY: ±¼¸²,verdana,tahoma; font-size:28px; }
+#footer_top { FONT-FAMILY: ±¼¸²,verdana,tahoma; font-size:13px; }
+#body { min-height:100%; }
+#content{ padding-bottom:9em; }
+#div-footer { margin-top:-9em; height:9em;  background-color:#47465e; }
+#footer_first { background-color:#47465e; font-size:13px; }
