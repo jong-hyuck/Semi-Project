@@ -7,8 +7,8 @@
 	border-width: 1px;
 }
 #table2{
-	border-style: none;
-	border-width: none;
+	border-style: solid;
+	border-width: 1px;
 }
 #button1 
 {
@@ -109,6 +109,13 @@ hr {
 </table>
 <hr>
 <br><br>
+<table id="table2" width="1100px" cellpadding="10">
+	<tr>
+		<td align="left">
+			<h3><font color="red">▶</font> 정보입력</h3>
+		</td>
+	</tr>
+</table>
 <table id="table1" width="1100px" cellpadding="10">
 
 	<form method="post" action="joinAction.Action" name="userinput" onSubmit="return checkIt()" >
@@ -223,10 +230,40 @@ hr {
 			</td>
 		<tr>
 		
+<table id="table2" width="1100px" cellpadding="10" >
+	<tr>
+		<td align="left">
+			<h3><font color="red">▶</font> 약관동의</h3>
+		</td>
+	</tr>
+	<tr>
+		<td align="left" width="475px">
+			<font color="red">*</font> 서비스 이용약관
+		</td>
+		<td width="75px">
+			<input type="checkbox" name="promise1" value="true"/>
+		</td>
+		<td align="left" width="475px">
+			<font color="red">*</font> 개인정보 수집 및 이용
+		</td>
+		<td width="75px">
+			<input type="checkbox" name="promise2" value="true"/>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">	
+			<textarea name="promise1"  cols="70" rows="10" readonly>약관1</textarea>
+		</td>
+		<td colspan="2">	
+			<textarea name="promise2"  cols="70" rows="10" readonly>약관2</textarea>
+		</td>
+	</tr>
+</table>
 	
 </table>
 	<br>
 	<table width="1100px" id="table2">
+		
 		<tr>
 			<td>
 				<p align="right">
