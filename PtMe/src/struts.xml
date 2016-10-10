@@ -14,6 +14,12 @@
 		
 	</package>
 	
+	<package name="join" namespace="/" extends="struts-default, tiles-default">
+		<action name="join" class="join.joinAction">
+			<result type="tiles">joinForm</result>
+		</action>
+		
+	</package>
 	
 
 

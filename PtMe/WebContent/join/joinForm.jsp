@@ -1,22 +1,124 @@
 <%@ page contentType="text/html; charset=euc-kr"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <style>
-table, tr{
+#table1, #tr1{
     font:12px 굴림, sans-serif;
 	border-style: solid;
 	border-width: 1px;
 }
-
+#table2{
+	border-style: none;
+	border-width: none;
+}
+#button1 
+{
+background: #f4b701;
+border: none;	
+border-radius: 3px;
+color: #ffffff;	
+width: 200px;
+height: 40px;	
+font: 18px "Gulim", "Dotum", Georgia, "Times New Roman", Times, sans-serif; font-weight:bold;
+margin: 0 0 0 0; 
+padding: 1px 1px 1px 1px;	
+text-shadow: 0px 0px 0px 0px #e7e7e7; 
+}
+#cont_head{
+font: 25px "Gulim", "Dotum", Georgia, "Times New Roman", Times, sans-serif; font-weight:bold;
+}
+hr {
+    height:10px; 
+    width:100%; 
+    border:none; 
+    color:#ff5a00; 
+    background:#ff5a00; 
+    margin: 0 auto; 
+}
 </style>
 
-<table width="1100px" cellpadding="10">
-	<form>
+<script language="JavaScript">
+	function checkIt(){
+		var userinput=eval("document.userinput");
+		if(!userinput.id.value){
+			alert("ID를 입력하세요");
+			return false;
+		}
+		if(!userinput.pswd.value){
+			alert("비밀번호를 입력하세요");
+			return false;
+		}
+		if(userinput.pswd.value != userinput.pswd2.value){
+			alert("비밀번호를 동일하게 입력하세요");
+			return false;
+		}
+		if(!userinput.name.value){
+			alert("이름을 입력하세요");
+			return false;
+		}
+		if(!userinput.sex.value){
+			alert("성별을 체크하세요");
+			return false;
+		}
+		if(!userinput.birthDay.value){
+			alert("생년월일을 입력하세요");
+			return false;
+		}
+		if(!userinput.phone1.value || !userinput.phone2.value || !userinput.phone3.value){
+			alert("휴대폰번호를 입력하세요");
+			return false;
+		}
+		if(!userinput.email.value){
+			alert("이메일을 입력하세요");
+			return false;
+		}
+		if(!userinput.zipcode.value){
+			alert("우편번호를 입력하세요");
+			return false;
+		}
+		if(!userinput.address.value){
+			alert("상세주소를 입력하세요");
+			return false;
+		}
+	}
+	
+	function openConfirmid(userinput){
+		if(userinput.id.value == ""){
+			alert("아이디를 입력하세요");
+			return;
+		}
+		url = "confirmId.action?id="+userinput.id.value;
+				
+		open(url, "confirm", "toolbar=no, location=no, status=no, menubar=no, scrollbars=no,resizable=no,width=550, height=200");
+	}
+	
+	function zipCheck(){
+		url="zipCheck.action?check=y";
+		window.open(url,"post","toolbar=no, width=500, height=300, directries=no, status=yes, scrollbars=yes, menubar=no");
+	}
+
+</script>
+
+
+<br>
+<table id="table2" width="1100px" cellpadding="10">
+	<tr>
+		<td align="left">
+			<h1>회원가입</h1>
+		</td>
+	</tr>
+</table>
+<hr>
+<br><br>
+<table id="table1" width="1100px" cellpadding="10">
+
+	<form method="post" action="joinAction.Action" name="userinput" onSubmit="return checkIt()" >
 		<tr height="40px">
 			<td width="150px" bgcolor="#e2e2e2">
 				<font color="red">*</font> <b>아이디</b>
 			</td>
 			<td>
 				<input type="text" name="id" size="25" maxlength="15" >
+				<input type="button" name="confirm_id" value="ID중복확인" OnClick="openConfirmid(this.form)">
 				<font color="#989898">4~15자의 영문,숫자 사용가능합니다.</font>
 			</td>
 		<tr>
@@ -102,7 +204,7 @@ table, tr{
 		
 		<tr height="40px">
 			<td width="150px" bgcolor="#e2e2e2">
-				<b>우편번호</b>
+				<font color="red">*</font> <b>우편번호</b>
 			</td>
 			<td>
 				<input type="text" name="zipcode" size="7">
@@ -113,13 +215,24 @@ table, tr{
 		
 		<tr height="40px">
 			<td width="150px" bgcolor="#e2e2e2">
-				<b>주소</b>
+				<font color="red">*</font> <b>주소</b>
 			</td>
 			<td>
 				<input type="text" name="address" size="60">
-				<font color="#989898">상세주소를 검색하세요.</font>
+				<font color="#989898">상세주소를 입력하세요.</font>
 			</td>
 		<tr>
 		
-	</form>
+	
 </table>
+	<br>
+	<table width="1100px" id="table2">
+		<tr>
+			<td>
+				<p align="right">
+					<input id="button1" type="submit" name="confirm" value="가 입">
+				</p>
+			</td>	
+		</tr>
+	</table>	
+	</form>

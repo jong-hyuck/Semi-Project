@@ -20,7 +20,7 @@
 		<center>
 			<div id="content">
 				<table width="1200">
-				 content
+				<tiles:insertAttribute name="body"/>
 				</table>
 			</div>
 		</center>
