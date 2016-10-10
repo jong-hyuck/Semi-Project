@@ -20,7 +20,11 @@
 		<center>
 			<div id="content">
 				<table width="1200">
+<<<<<<< HEAD
 				<tiles:insertAttribute name="body"/>
+=======
+				 content
+>>>>>>> branch 'master' of https://github.com/jong-hyuck/Semi-Project.git
 				</table>
 			</div>
 		</center>

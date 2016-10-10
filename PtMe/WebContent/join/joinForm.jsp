@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=euc-kr"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<<<<<<< HEAD
 <style>
 #table1, #tr1{
     font:12px ±¼¸², sans-serif;
@@ -273,3 +274,21 @@ hr {
 		</tr>
 	</table>	
 	</form>
+=======
+
+
+<table width="1100px" border="1px" >
+	<form>
+		<tr >
+			<td width="250px" bgcolor="#e2e2e2">
+				<font color="red">*</font> <b>¾ÆÀÌµð</b>
+			</td>
+			<td>
+				<s:textfield name="id" theme="simple" cssStyle="width:150px" maxlength="15"/>
+			</td>
+	
+	
+		<tr>
+	</form>
+</table>
+>>>>>>> branch 'master' of https://github.com/jong-hyuck/Semi-Project.git

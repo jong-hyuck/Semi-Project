@@ -7,6 +7,7 @@
 	<definition name="main" template="/tiles/layout.jsp">
 		<put-attribute name="title" value="Please Pt-Me" />
 		<put-attribute name="header" value="/tiles/header.jsp" />
+<<<<<<< HEAD
 		<put-attribute name="body" value="/tiles/body.jsp" />
 		<put-attribute name="footer" value="/tiles/footer.jsp" />
 	</definition>
@@ -14,6 +15,9 @@
 	<definition name="joinForm" extends="main">
 		<put-attribute name="title" value="Please Pt-Me 회원가입" />
 		<put-attribute name="body" value="/join/joinForm.jsp" />
+=======
+		<put-attribute name="footer" value="/tiles/footer.jsp" />
+>>>>>>> branch 'master' of https://github.com/jong-hyuck/Semi-Project.git
 	</definition>
 	
 </tiles-definitions>

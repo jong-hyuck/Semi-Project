@@ -14,12 +14,15 @@
 		
 	</package>
 	
+<<<<<<< HEAD
 	<package name="join" namespace="/" extends="struts-default, tiles-default">
 		<action name="join" class="join.joinAction">
 			<result type="tiles">joinForm</result>
 		</action>
 		
 	</package>
+=======
+>>>>>>> branch 'master' of https://github.com/jong-hyuck/Semi-Project.git
 	
 
 
